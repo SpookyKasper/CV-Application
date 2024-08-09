@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CustomInput = ({ fieldName, initialValue = "", type = "text" }) => {
+const CustomInput = ({ fieldName, type = "text", initialValue = "" }) => {
   const [value, setValue] = useState(initialValue);
 
   const handleChange = (e) => {
