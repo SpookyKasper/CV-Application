@@ -9,7 +9,7 @@ const CustomInput = ({ fieldName, initialValue = "", type = "text" }) => {
 
   return (
     <div className="input-field">
-      <label for={fieldName}>{fieldName}</label>
+      <label htmlFor={fieldName}>{fieldName}</label>
       <input type={type} value={value} onChange={handleChange} id={fieldName} />
     </div>
   );
