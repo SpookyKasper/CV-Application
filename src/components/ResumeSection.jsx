@@ -1,10 +1,14 @@
 import { useState } from "react";
+import PersonalInfo from "./PersonalInfo";
 
 const ResumeSection = ({ sectionName, form }) => {
   const [section, setSection] = useState(form);
 
   const handleSubmit = () => {
-    setSection(form);
+    const name = document.getElementById("Name").value;
+    const phone = document.getElementById("Phone Number").value;
+    const email = document.getElementById("Email").value;
+    setSection(<PersonalInfo name={name} phone={phone} email={email} />);
   };
 
   const CustomSubmitButton = () => {
