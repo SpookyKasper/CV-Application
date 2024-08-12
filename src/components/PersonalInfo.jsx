@@ -1,5 +1,8 @@
-const PersonalInfo = ({ name, email, phone }) => {
-  console.log(name);
+const PersonalInfo = () => {
+  const email = document.getElementById("Email").value;
+  const phone = document.getElementById("Phone Number").value;
+  const name = document.getElementById("Name").value;
+
   return (
     <div className="personal">
       <h1>{name}</h1>
