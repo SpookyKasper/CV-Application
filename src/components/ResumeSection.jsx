@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PersonalInfo from "./PersonalInfo";
 import CustomForm from "./CustomForm";
+import Education from "./Education";
 
 const ResumeSection = ({ sectionName, fieldObjects }) => {
   const form = <CustomForm fieldObjects={fieldObjects} />;
@@ -8,26 +9,22 @@ const ResumeSection = ({ sectionName, fieldObjects }) => {
 
   const sections = {
     "Personal Info": <PersonalInfo />,
-    // Education: <Education />,
+    Education: <Education />,
     // Experience: <Experience />,
   };
 
-  const handleSubmit = () => {
-    setSection(sections[sectionName]);
-  };
-
-  const CustomSubmitButton = () => {
-    return <button onClick={handleSubmit}>Submit</button>;
-  };
+  const handleEdit = () => {};
 
   return (
     <div className="section">
       <h2>{sectionName}</h2>
       <div className="content">{section}</div>
-      <button onClick={handleSubmit}></button>
-      <CustomSubmitButton />
+      <button onClick={handleEdit}>Edit</button>
     </div>
   );
 };
 
 export default ResumeSection;
+
+// Algorithm
+// Given

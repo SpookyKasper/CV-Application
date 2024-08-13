@@ -13,5 +13,13 @@ createRoot(document.getElementById("root")).render(
         { name: "Email", type: "mail" },
       ]}
     />
+    <ResumeSection
+      sectionName={"Education"}
+      fieldObjects={[
+        { name: "School Name" },
+        { name: "Title of Study" },
+        { name: "Date of Study" },
+      ]}
+    />
   </StrictMode>
 );

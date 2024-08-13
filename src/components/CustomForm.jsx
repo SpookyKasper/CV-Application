@@ -10,7 +10,24 @@ const CustomForm = ({ fieldObjects = [] }) => {
     />
   ));
 
-  return <form action="">{inputList}</form>;
+  const handleSubmit = () => {
+    // setSection(sections[sectionName]);
+  };
+
+  const CustomSubmitButton = () => {
+    return (
+      <button onClick={handleSubmit} type="submit">
+        Submit
+      </button>
+    );
+  };
+
+  return (
+    <form action="">
+      {inputList}
+      <CustomSubmitButton />
+    </form>
+  );
 };
 
 export default CustomForm;
