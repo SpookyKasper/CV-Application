@@ -2,10 +2,13 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import ResumeSection from "./components/ResumeSection";
+import PersonalInfo from "./components/PersonalInfo";
+import PersonalInfoSection from "./components/PersonalInfoSection";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <ResumeSection
+    <PersonalInfoSection />
+    {/* <ResumeSection
       sectionName={"Personal Info"}
       fieldObjects={[
         { name: "Name" },
@@ -20,6 +23,6 @@ createRoot(document.getElementById("root")).render(
         { name: "Title of Study" },
         { name: "Date of Study" },
       ]}
-    />
+    /> */}
   </StrictMode>
 );

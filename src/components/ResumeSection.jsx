@@ -1,6 +1,5 @@
 import { useState } from "react";
 import PersonalInfo from "./PersonalInfo";
-import CustomForm from "./CustomForm";
 import Education from "./Education";
 
 const ResumeSection = ({ sectionName, fieldObjects }) => {
