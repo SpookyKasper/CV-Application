@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CustomForm from "./CustomForm";
 import PersonalInfo from "./PersonalInfo";
+import SubmitEditBtn from "./SubmitEditBtn";
 
 const PersonalInfoSection = () => {
   const [name, setName] = useState("");
@@ -40,25 +41,21 @@ const PersonalInfoSection = () => {
     },
   ];
 
-  const content = () => {
-    if (isSubmitted) {
-      return (
-        <>
-          <PersonalInfo name={name} email={email} phone={phoneNum} />
-          <button onClick={handleSubmitEdit}>Edit</button>
-        </>
-      );
-    }
-    return (
-      <>
-        <CustomForm inputObjects={inputObjects} />
-        <button onClick={handleSubmitEdit}>Submit</button>
-      </>
-    );
-  };
+  const mainContent = isSubmitted ? (
+    <PersonalInfo name={name} email={email} phone={phoneNum} />
+  ) : (
+    <CustomForm inputObjects={inputObjects} />
+  );
 
-  // return <Content />;
-  return <>{content()}</>;
+  return (
+    <>
+      {mainContent}
+      <SubmitEditBtn
+        isSubmitted={isSubmitted}
+        handleSubmitEdit={handleSubmitEdit}
+      />
+    </>
+  );
 };
 
 export default PersonalInfoSection;
