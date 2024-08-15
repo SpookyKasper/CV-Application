@@ -1,4 +1,4 @@
-const Education = () => {
+const Education = ({ schoolName, title, dateOfStudy }) => {
   return (
     <div className="personal">
       <p>School Name: {schoolName} </p>

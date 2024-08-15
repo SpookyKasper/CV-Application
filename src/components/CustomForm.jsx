@@ -7,6 +7,7 @@ const CustomForm = ({ inputObjects }) => {
       name={obj.name}
       value={obj.value}
       handleChange={obj.handleChange}
+      type={obj.type}
     />
   ));
   return <form action="">{inputList}</form>;
