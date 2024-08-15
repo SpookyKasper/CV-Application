@@ -49,6 +49,7 @@ const PersonalInfoSection = () => {
 
   return (
     <>
+      <h1>Personal Information</h1>
       {mainContent}
       <SubmitEditBtn
         isSubmitted={isSubmitted}

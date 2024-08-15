@@ -1,7 +1,7 @@
 const PersonalInfo = ({ name, email, phone }) => {
   return (
     <>
-      <h1>{name}</h1>
+      <h2>{name}</h2>
       <p>Email: {email}</p>
       <p>Phone: {phone}</p>
     </>
