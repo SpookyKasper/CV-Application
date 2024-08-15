@@ -1,17 +1,11 @@
-import { useState } from "react";
+import _ from "lodash";
 
-const CustomInput = ({ fieldName, type = "text" }) => {
-  const [value, setValue] = useState("");
-
-  const handleChange = (e) => {
-    setValue(e.target.value);
-  };
-
+const CustomInput = ({ name, value, handleChange, type = "text" }) => {
   return (
-    <div className="input-field">
-      <label htmlFor={fieldName}>{fieldName}</label>
-      <input type={type} value={value} onChange={handleChange} id={fieldName} />
-    </div>
+    <label htmlFor={name}>
+      {_.startCase(name)}
+      <input type={type} id={name} value={value} onChange={handleChange} />
+    </label>
   );
 };
 

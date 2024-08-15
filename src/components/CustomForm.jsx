@@ -1,15 +1,14 @@
 import CustomInput from "./CustomInput";
 
-const CustomForm = ({ fieldObjects = [] }) => {
-  const inputList = fieldObjects.map((fieldObject) => (
+const CustomForm = ({ inputObjects }) => {
+  const inputList = inputObjects.map((obj) => (
     <CustomInput
-      key={fieldObject.name}
-      fieldName={fieldObject.name}
-      type={fieldObject.type}
-      value={fieldObject.value}
+      key={obj.name}
+      name={obj.name}
+      value={obj.value}
+      handleChange={obj.handleChange}
     />
   ));
-
   return <form action="">{inputList}</form>;
 };
 

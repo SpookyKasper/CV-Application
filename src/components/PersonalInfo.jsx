@@ -1,10 +1,6 @@
-const PersonalInfo = () => {
-  const email = document.getElementById("Email").value;
-  const phone = document.getElementById("Phone Number").value;
-  const name = document.getElementById("Name").value;
-
+const PersonalInfo = ({ name, email, phone }) => {
   return (
-    <div className="personal">
+    <div className="personal-info-section">
       <h1>{name}</h1>
       <p>Email: {email}</p>
       <p>Phone: {phone}</p>
